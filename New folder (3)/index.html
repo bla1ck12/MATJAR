@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>منصة متجري</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="bg-primary text-white p-4 text-center">
+    <h1>متجري الإلكتروني</h1>
+    <p>أفضل المنتجات بانتظارك</p>
+  </header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">الرئيسية</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#add-product">إضافة منتج</a></li>
+        <li class="nav-item"><a class="nav-link" href="#view-products">عرض المنتجات</a></li>
+        <li class="nav-item"><a class="nav-link" href="login.php">تسجيل الدخول</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container mt-5">
+    <section id="add-product">
+      <h2>إضافة منتج جديد</h2>
+      <form action="add_product.php" method="POST" class="form-group">
+        <input type="text" name="product_name" class="form-control mb-2" placeholder="اسم المنتج" required><br>
+        <input type="number" name="product_price" class="form-control mb-2" placeholder="سعر المنتج" required><br>
+        <textarea name="product_description" class="form-control mb-2" placeholder="وصف المنتج" required></textarea><br>
+        <button type="submit" class="btn btn-success">إضافة المنتج</button>
+      </form>
+    </section>
+    <section id="view-products">
+      <h2>عرض المنتجات</h2>
+      <div id="products-list"></div>
+    </section>
+  </div>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
